@@ -12,5 +12,6 @@ This is a sample project to use a webcam on Ubuntu on Windows with VirtualBox.
 > vagrant reload # only the first time
 > vagrant ssh
 
+$ cd webcam_test
 $ docker-compose up
 ```
