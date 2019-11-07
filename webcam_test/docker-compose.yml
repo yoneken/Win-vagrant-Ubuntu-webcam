@@ -4,9 +4,11 @@ services:
   webcam_test:
     build: .
     image: webcam_test:latest
-    command: ffmpeg -y -hide_banner -f v4l2 -t 10 -framerate 20 -video_size 640x480 -i /dev/video0 /webcam_test/webcam_test.mp4
+    command: python3 /webcam_test/webcam.py
     network_mode: "host"
     devices:
       - "/dev/video0:/dev/video0"
     volumes:
       - /home/vagrant/webcam_test:/webcam_test
+    environment:
+      DISPLAY: $DISPLAY
