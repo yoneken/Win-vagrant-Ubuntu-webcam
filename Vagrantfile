@@ -93,7 +93,7 @@ Vagrant.configure("2") do |config|
     #sudo apt -y install xserver-xorg-video-dummy xvfb
     sudo usermod -aG video vagrant
     curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-    echo "export DISPLAY=192.168.33.1:0.0" >> /home/vagrant/.bashrc
+    echo "export DISPLAY=10.0.2.2:0.0" >> /home/vagrant/.bashrc
   SHELL
 
   config.ssh.forward_x11 = true
