@@ -89,6 +89,7 @@ Vagrant.configure("2") do |config|
     sudo timedatectl set-timezone Asia/Tokyo
     sudo sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
     sudo apt update
+    sudo echo grub-pc hold | dpkg --set-selections
     sudo apt -y upgrade
     #sudo apt -y install xserver-xorg-video-dummy xvfb
     sudo usermod -aG video vagrant
